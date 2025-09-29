@@ -1,0 +1,1153 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v11.6.1"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2025-09-29T00:42:40.648Z",
+				"time": 62.50600000000001,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:8080/products/5",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmNhbWlAZ21haWwuY29tIiwiaWF0IjoxNzU5MTAzNjg4LCJleHAiOjE3NTkxMDcyODh9.3UXsq4q70mq7fnEuVlLQhcEHV_D-Bvasnm7-ruHYieY"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 29 Sep 2025 00:36:30 GMT"
+						}
+					],
+					"content": {
+						"size": 296,
+						"mimeType": "application/json",
+						"text": "{\"message\":\"Product deleted successfully\",\"data\":{\"id\":5,\"name\":\"Don Quijote actualizada\",\"description\":\"Don Quijote tapa dura actualizada\",\"price\":5500.0,\"stock\":15},\"meta\":{\"method\":\"DELETE\",\"url\":\"http://localhost:8080/products/5\",\"totalPages\":0,\"totalElements\":0,\"pageNumber\":0,\"pageSize\":0}}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 62.50600000000001,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "DELETE PRODUCTS (TAREA1)"
+			},
+			{
+				"startedDateTime": "2025-09-29T00:42:40.648Z",
+				"time": 112.057,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/products?categoryId=3",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmNhbWlAZ21haWwuY29tIiwiaWF0IjoxNzU5MTAzNjg4LCJleHAiOjE3NTkxMDcyODh9.3UXsq4q70mq7fnEuVlLQhcEHV_D-Bvasnm7-ruHYieY"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"name\": \"Cartulina brillante\",\n  \"description\": \"Cartulina brillante block de 10 hojas\",\n  \"price\": 5000,\n  \"stock\": 10\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 29 Sep 2025 00:25:09 GMT"
+						}
+					],
+					"content": {
+						"size": 292,
+						"mimeType": "application/json",
+						"text": "{\"message\":\"Product created successfully\",\"data\":{\"id\":5,\"name\":\"Cartulina brillante\",\"description\":\"Cartulina brillante block de 10 hojas\",\"price\":5000.0,\"stock\":10},\"meta\":{\"method\":\"POST\",\"url\":\"http://localhost:8080/products\",\"totalPages\":0,\"totalElements\":0,\"pageNumber\":0,\"pageSize\":0}}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 112.057,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "POST PRODUCTS (TAREA1)"
+			},
+			{
+				"startedDateTime": "2025-09-29T00:42:40.648Z",
+				"time": 52.855,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/products",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmNhbWlAZ21haWwuY29tIiwiaWF0IjoxNzU5MTAzNjg4LCJleHAiOjE3NTkxMDcyODh9.3UXsq4q70mq7fnEuVlLQhcEHV_D-Bvasnm7-ruHYieY"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 29 Sep 2025 00:28:32 GMT"
+						}
+					],
+					"content": {
+						"size": 297,
+						"mimeType": "application/json",
+						"text": "{\"message\":\"Products retrieved successfully\",\"data\":[{\"id\":5,\"name\":\"Cartulina brillante\",\"description\":\"Cartulina brillante block de 10 hojas\",\"price\":5000.0,\"stock\":10}],\"meta\":{\"method\":\"GET\",\"url\":\"http://localhost:8080/products\",\"totalPages\":1,\"totalElements\":1,\"pageNumber\":1,\"pageSize\":10}}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 52.855,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "GET PRODUCTS (TAREA1)"
+			},
+			{
+				"startedDateTime": "2025-09-29T00:42:40.648Z",
+				"time": 77.171,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:8080/products/5?categoryId=3",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmNhbWlAZ21haWwuY29tIiwiaWF0IjoxNzU5MTAzNjg4LCJleHAiOjE3NTkxMDcyODh9.3UXsq4q70mq7fnEuVlLQhcEHV_D-Bvasnm7-ruHYieY"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"name\": \"Don Quijote actualizada\",\n  \"description\": \"Don Quijote tapa dura actualizada\",\n  \"price\": 5500,\n  \"stock\": 15\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 29 Sep 2025 00:28:42 GMT"
+						}
+					],
+					"content": {
+						"size": 293,
+						"mimeType": "application/json",
+						"text": "{\"message\":\"Product updated successfully\",\"data\":{\"id\":5,\"name\":\"Don Quijote actualizada\",\"description\":\"Don Quijote tapa dura actualizada\",\"price\":5500.0,\"stock\":15},\"meta\":{\"method\":\"PUT\",\"url\":\"http://localhost:8080/products/5\",\"totalPages\":0,\"totalElements\":0,\"pageNumber\":0,\"pageSize\":0}}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 77.171,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "PUT PRODUCTS (TAREA1)"
+			},
+			{
+				"startedDateTime": "2025-09-29T00:42:40.648Z",
+				"time": 39.397,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/categories",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmNhbWlAZ21haWwuY29tIiwiaWF0IjoxNzU5MTAzNjg4LCJleHAiOjE3NTkxMDcyODh9.3UXsq4q70mq7fnEuVlLQhcEHV_D-Bvasnm7-ruHYieY"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"name\": \"Papelería\",\n  \"description\": \"Papelería variados\"\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 29 Sep 2025 00:24:31 GMT"
+						}
+					],
+					"content": {
+						"size": 258,
+						"mimeType": "application/json",
+						"text": "{\"message\":\"Category created successfully\",\"data\":{\"id\":3,\"name\":\"Papelería\",\"description\":\"Papelería variados\",\"products\":null},\"meta\":{\"method\":\"POST\",\"url\":\"http://localhost:8080/categories\",\"totalPages\":0,\"totalElements\":0,\"pageNumber\":0,\"pageSize\":0}}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 39.397,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "POST CATEGORIES (TAREA1)"
+			},
+			{
+				"startedDateTime": "2025-09-29T00:42:40.648Z",
+				"time": 75.723,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:8080/categories/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmNhbWlAZ21haWwuY29tIiwiaWF0IjoxNzU5MTAzNjg4LCJleHAiOjE3NTkxMDcyODh9.3UXsq4q70mq7fnEuVlLQhcEHV_D-Bvasnm7-ruHYieY"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 29 Sep 2025 00:19:26 GMT"
+						}
+					],
+					"content": {
+						"size": 575,
+						"mimeType": "application/json",
+						"text": "{\"message\":\"Category deleted successfully\",\"data\":{\"id\":1,\"name\":\"Libros actualizados\",\"description\":\"Descripción actualizada de libros\",\"products\":[{\"id\":1,\"name\":\"Biblia\",\"description\":\"Biblia tapa dura\",\"price\":5000.0,\"stock\":10},{\"id\":3,\"name\":\"Don Quijote\",\"description\":\"Don Quijote tapa dura\",\"price\":5000.0,\"stock\":10},{\"id\":4,\"name\":\"La princesa y el sapo\",\"description\":\"La princesa y el sapo tapa dura\",\"price\":5000.0,\"stock\":10}]},\"meta\":{\"method\":\"DELETE\",\"url\":\"http://localhost:8080/categories/1\",\"totalPages\":0,\"totalElements\":0,\"pageNumber\":0,\"pageSize\":0}}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 75.723,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "DELETE CATEGORIES (TAREA1)"
+			},
+			{
+				"startedDateTime": "2025-09-29T00:42:40.648Z",
+				"time": 39.343999999999994,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/categories",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmNhbWlAZ21haWwuY29tIiwiaWF0IjoxNzU5MTAzNjg4LCJleHAiOjE3NTkxMDcyODh9.3UXsq4q70mq7fnEuVlLQhcEHV_D-Bvasnm7-ruHYieY"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 29 Sep 2025 00:28:04 GMT"
+						}
+					],
+					"content": {
+						"size": 379,
+						"mimeType": "application/json",
+						"text": "{\"message\":\"Categories retrieved successfully\",\"data\":[{\"id\":3,\"name\":\"Papelería\",\"description\":\"Papelería variados\",\"products\":[{\"id\":5,\"name\":\"Cartulina brillante\",\"description\":\"Cartulina brillante block de 10 hojas\",\"price\":5000.0,\"stock\":10}]}],\"meta\":{\"method\":\"GET\",\"url\":\"http://localhost:8080/categories\",\"totalPages\":1,\"totalElements\":1,\"pageNumber\":1,\"pageSize\":10}}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 39.343999999999994,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "GET CATEGORIES (TAREA1)"
+			},
+			{
+				"startedDateTime": "2025-09-29T00:42:40.648Z",
+				"time": 592.481,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:8080/categories/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmNhbWlAZ21haWwuY29tIiwiaWF0IjoxNzU5MTAzNjg4LCJleHAiOjE3NTkxMDcyODh9.3UXsq4q70mq7fnEuVlLQhcEHV_D-Bvasnm7-ruHYieY"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"name\": \"Libros actualizados\",\n  \"description\": \"Descripción actualizada de libros\"\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 29 Sep 2025 00:00:16 GMT"
+						}
+					],
+					"content": {
+						"size": 572,
+						"mimeType": "application/json",
+						"text": "{\"message\":\"Category updated successfully\",\"data\":{\"id\":1,\"name\":\"Libros actualizados\",\"description\":\"Descripción actualizada de libros\",\"products\":[{\"id\":1,\"name\":\"Biblia\",\"description\":\"Biblia tapa dura\",\"price\":5000.0,\"stock\":10},{\"id\":3,\"name\":\"Don Quijote\",\"description\":\"Don Quijote tapa dura\",\"price\":5000.0,\"stock\":10},{\"id\":4,\"name\":\"La princesa y el sapo\",\"description\":\"La princesa y el sapo tapa dura\",\"price\":5000.0,\"stock\":10}]},\"meta\":{\"method\":\"PUT\",\"url\":\"http://localhost:8080/categories/1\",\"totalPages\":0,\"totalElements\":0,\"pageNumber\":0,\"pageSize\":0}}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 592.481,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "PUT CATEGORIES (TAREA1)"
+			},
+			{
+				"startedDateTime": "2025-09-29T00:42:40.648Z",
+				"time": 514.341,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/admin",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmNhbWlAZ21haWwuY29tIiwiaWF0IjoxNzU5MTAzNjg4LCJleHAiOjE3NTkxMDcyODh9.3UXsq4q70mq7fnEuVlLQhcEHV_D-Bvasnm7-ruHYieY"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"name\": \"cami\", \n\t\"lastname\": \"morales\",\n\t\"email\": \"camim@gmail.com\",\n\t\"password\": \"admin123\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 28 Sep 2025 22:55:35 GMT"
+						}
+					],
+					"content": {
+						"size": 578,
+						"mimeType": "application/json",
+						"text": "{\"id\":4,\"name\":\"cami\",\"lastname\":null,\"email\":\"camim@gmail.com\",\"password\":\"$2a$10$nFekrQMXPdNgnxe.Y/nid.DNkiWWrwJTxEmnGAkv3V8PFpndYVyPu\",\"createdAt\":\"2025-09-28T22:55:35.848+00:00\",\"updatedAt\":\"2025-09-28T22:55:35.848+00:00\",\"role\":{\"id\":2,\"name\":\"SUPER_ADMIN\",\"description\":\"Super Administrator role  for Homework1\",\"createdAt\":\"2025-09-28T22:09:27.808+00:00\",\"updatedAt\":\"2025-09-28T22:09:27.808+00:00\"},\"enabled\":true,\"username\":\"camim@gmail.com\",\"authorities\":[{\"authority\":\"ROLE_SUPER_ADMIN\"}],\"credentialsNonExpired\":true,\"accountNonExpired\":true,\"accountNonLocked\":true}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 514.341,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "ADD ADMIN (TAREA1)"
+			},
+			{
+				"startedDateTime": "2025-09-29T00:42:40.648Z",
+				"time": 285.16,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/auth/signup",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"name\": \"Mila\", \n\t\"lastname\": \"Morales\",\n\t\"email\": \"milamorales@gmail.com\",\n\t\"password\": \"mila123\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 28 Sep 2025 22:51:16 GMT"
+						}
+					],
+					"content": {
+						"size": 573,
+						"mimeType": "application/json",
+						"text": "{\"id\":3,\"name\":\"Mila\",\"lastname\":\"Morales\",\"email\":\"milamorales@gmail.com\",\"password\":\"$2a$10$Oy5JoATWM61PQx0fcPJEyexONjL0VStPNRNuaURuUsnxAjnTp5EHq\",\"createdAt\":\"2025-09-28T22:51:16.584+00:00\",\"updatedAt\":\"2025-09-28T22:51:16.584+00:00\",\"role\":{\"id\":1,\"name\":\"USER\",\"description\":\"Default user role for Homework1\",\"createdAt\":\"2025-09-28T22:09:27.782+00:00\",\"updatedAt\":\"2025-09-28T22:09:27.783+00:00\"},\"enabled\":true,\"username\":\"milamorales@gmail.com\",\"authorities\":[{\"authority\":\"ROLE_USER\"}],\"credentialsNonExpired\":true,\"accountNonExpired\":true,\"accountNonLocked\":true}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 285.16,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "SIGNUP (TAREA1)"
+			},
+			{
+				"startedDateTime": "2025-09-29T00:42:40.648Z",
+				"time": 425.41499999999996,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/auth/login",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"email\": \"supercami@gmail.com\", \n\t\"password\": \"superadmin123\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 28 Sep 2025 23:54:48 GMT"
+						}
+					],
+					"content": {
+						"size": 786,
+						"mimeType": "application/json",
+						"text": "{\"token\":\"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmNhbWlAZ21haWwuY29tIiwiaWF0IjoxNzU5MTAzNjg4LCJleHAiOjE3NTkxMDcyODh9.3UXsq4q70mq7fnEuVlLQhcEHV_D-Bvasnm7-ruHYieY\",\"authUser\":{\"id\":1,\"name\":\"Camila\",\"lastname\":\"Morales\",\"email\":\"supercami@gmail.com\",\"password\":\"$2a$10$ShX4cIM2GeBtzVRNZVkN7O5ILtu.HPQTFQl9cNKP3jatCEjTaECr2\",\"createdAt\":\"2025-09-28T22:09:28.023+00:00\",\"updatedAt\":\"2025-09-28T22:09:28.023+00:00\",\"role\":{\"id\":2,\"name\":\"SUPER_ADMIN\",\"description\":\"Super Administrator role  for Homework1\",\"createdAt\":\"2025-09-28T22:09:27.808+00:00\",\"updatedAt\":\"2025-09-28T22:09:27.808+00:00\"},\"enabled\":true,\"accountNonExpired\":true,\"credentialsNonExpired\":true,\"username\":\"supercami@gmail.com\",\"authorities\":[{\"authority\":\"ROLE_SUPER_ADMIN\"}],\"accountNonLocked\":true},\"expiresIn\":3600000}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 425.41499999999996,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "LOGIN (TAREA1)"
+			}
+		]
+	}
+}

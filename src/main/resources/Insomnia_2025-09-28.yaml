@@ -1,0 +1,380 @@
+type: collection.insomnia.rest/5.0
+name: Tarea1_CRUD_Camila
+meta:
+  id: wrk_f3e911249f1a43f19cf29d2a52542f3c
+  created: 1759097998573
+  modified: 1759097998573
+  description: ""
+collection:
+  - url: "{{ _._baseURL }}auth/login"
+    name: LOGIN (TAREA1)
+    meta:
+      id: req_ad1af8c81f2f485c8a763b15ab6b0d2e
+      created: 1759098064389
+      modified: 1759099618940
+      isPrivate: false
+      description: ""
+      sortKey: -1759098064389
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "supercami@gmail.com", 
+        	"password": "superadmin123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_57444facb8034e919637f799f82eb6fa
+      - name: User-Agent
+        value: insomnia/11.6.1
+        id: pair_c231af0c0fb9495d8531a429e8397dd3
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _._baseURL }}auth/signup"
+    name: SIGNUP (TAREA1)
+    meta:
+      id: req_6faf46d425ea41c48c2b63a4c3d897a0
+      created: 1759099715753
+      modified: 1759099872942
+      isPrivate: false
+      description: ""
+      sortKey: -1759099715753
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Mila", 
+        	"lastname": "Morales",
+        	"email": "milamorales@gmail.com",
+        	"password": "mila123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _._baseURL }}admin"
+    name: ADD ADMIN (TAREA1)
+    meta:
+      id: req_dabdf69be4dd4268895cb646135e3a81
+      created: 1759099951982
+      modified: 1759100334001
+      isPrivate: false
+      description: ""
+      sortKey: -1759099951982
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "cami", 
+        	"lastname": "morales",
+        	"email": "camim@gmail.com",
+        	"password": "admin123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_ad1af8c81f2f485c8a763b15ab6b0d2e',
+        'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - name: Categories
+    meta:
+      id: fld_02fa1d49c80549deaabb020a2a911dc6
+      created: 1759105861892
+      modified: 1759105861892
+      sortKey: -1759105861892
+      description: ""
+    children:
+      - url: "{{ _._baseURL }}categories"
+        name: GET CATEGORIES (TAREA1)
+        meta:
+          id: req_e0094f5301bd40c8b3f12aef8ddbce98
+          created: 1759100770647
+          modified: 1759105892340
+          isPrivate: false
+          description: ""
+          sortKey: -1759105877848
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_ad1af8c81f2f485c8a763b15ab6b0d2e',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _._baseURL }}categories"
+        name: POST CATEGORIES (TAREA1)
+        meta:
+          id: req_0b155c27c51a46e28bc89dfb8e63e14f
+          created: 1759101171601
+          modified: 1759105898748
+          isPrivate: false
+          description: ""
+          sortKey: -1759105877948
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "name": "Papelería",
+              "description": "Papelería variados"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_ad1af8c81f2f485c8a763b15ab6b0d2e',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _._baseURL }}categories/1"
+        name: PUT CATEGORIES (TAREA1)
+        meta:
+          id: req_298e9ecf09f64acb8118ee39ce5c3e91
+          created: 1759103541265
+          modified: 1759105877868
+          isPrivate: false
+          description: ""
+          sortKey: -1759105877748
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "name": "Libros actualizados",
+              "description": "Descripción actualizada de libros"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_ad1af8c81f2f485c8a763b15ab6b0d2e',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _._baseURL }}categories/1"
+        name: DELETE CATEGORIES (TAREA1)
+        meta:
+          id: req_4daa0acf3fc44705ae99b05685f11553
+          created: 1759104503823
+          modified: 1759105903170
+          isPrivate: false
+          description: ""
+          sortKey: -1759105877898
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_ad1af8c81f2f485c8a763b15ab6b0d2e',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Products
+    meta:
+      id: fld_87fb2a0b3f234bef84bb9abb6e9cd779
+      created: 1759105959677
+      modified: 1759105959677
+      sortKey: -1759105959677
+      description: ""
+    children:
+      - url: "{{ _._baseURL }}products"
+        name: GET PRODUCTS (TAREA1)
+        meta:
+          id: req_20e49ab16138457190119ddb7a0f8a1a
+          created: 1759100414757
+          modified: 1759106069245
+          isPrivate: false
+          description: ""
+          sortKey: -1759105963537
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_ad1af8c81f2f485c8a763b15ab6b0d2e',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _._baseURL }}products?categoryId=3"
+        name: POST PRODUCTS (TAREA1)
+        meta:
+          id: req_e5a476276be44ebb9d7b5dc2fcab24ab
+          created: 1759100881695
+          modified: 1759105966122
+          isPrivate: false
+          description: ""
+          sortKey: -1759105963587
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "name": "Cartulina brillante",
+              "description": "Cartulina brillante block de 10 hojas",
+              "price": 5000,
+              "stock": 10
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_ad1af8c81f2f485c8a763b15ab6b0d2e',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _._baseURL }}products/5?categoryId=3"
+        name: PUT PRODUCTS (TAREA1)
+        meta:
+          id: req_72680a72f25f43dc9da1bba2460c6c81
+          created: 1759105521685
+          modified: 1759105963530
+          isPrivate: false
+          description: ""
+          sortKey: -1759105963487
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "name": "Don Quijote actualizada",
+              "description": "Don Quijote tapa dura actualizada",
+              "price": 5500,
+              "stock": 15
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_ad1af8c81f2f485c8a763b15ab6b0d2e',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _._baseURL }}products/5"
+        name: DELETE PRODUCTS (TAREA1)
+        meta:
+          id: req_3a88698c36d842be953058e5ee376ed4
+          created: 1759106075056
+          modified: 1759106223444
+          isPrivate: false
+          description: ""
+          sortKey: -1759106075056
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_ad1af8c81f2f485c8a763b15ab6b0d2e',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_822e1781a8f0b5aa0279f5525ec4735e24e58b11
+    created: 1759097998590
+    modified: 1759097998590
+environments:
+  name: Base Environment
+  meta:
+    id: env_822e1781a8f0b5aa0279f5525ec4735e24e58b11
+    created: 1759097998584
+    modified: 1759098343774
+    isPrivate: false
+  data:
+    _baseURL: http://localhost:8080/
+    "": ""
