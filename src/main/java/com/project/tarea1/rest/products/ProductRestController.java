@@ -16,6 +16,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import java.util.HashMap;
+import java.util.Map;
 
 import java.util.Optional;
 
@@ -46,25 +48,36 @@ public class ProductRestController {
         return new GlobalResponseHandler().handleResponse("Products retrieved successfully",
                 productsPage.getContent(), HttpStatus.OK, meta);
     }
-
-/*
-    @PutMapping("/{productId}")
-    @PreAuthorize("hasRole('SUPER_ADMIN')")
-    public ResponseEntity<?> updateProduct(@PathVariable Integer productId,
-                                           @RequestBody Products product,
-                                           HttpServletRequest request) {
+    @GetMapping("/{productId}")
+    @PreAuthorize("hasAnyRole('USER', 'SUPER_ADMIN')")
+    public ResponseEntity<?> getProductById(@PathVariable Integer productId, HttpServletRequest request) {
         Optional<Products> foundProduct = productRepository.findById(Long.valueOf(productId));
-        if (foundProduct.isPresent()) {
-            product.setId(productId);
-            productRepository.save(product);
-            return new GlobalResponseHandler().handleResponse("Product updated successfully",
-                    product, HttpStatus.OK, request);
-        } else {
-            return new GlobalResponseHandler().handleResponse("Product id " + productId + " not found",
-                    HttpStatus.NOT_FOUND, request);
-        }
-    }*/
 
+        if (foundProduct.isEmpty()) {
+            return new GlobalResponseHandler().handleResponse(
+                    "Product id " + productId + " not found",
+                    HttpStatus.NOT_FOUND,
+                    request
+            );
+        }
+
+        Products product = foundProduct.get();
+        Map<String, Object> productData = new HashMap<>();
+        productData.put("id", product.getId());
+        productData.put("name", product.getName());
+        productData.put("description", product.getDescription());
+        productData.put("price", product.getPrice());
+        productData.put("stock", product.getStock());
+        productData.put("categoryId", product.getCategory() != null ? product.getCategory().getId() : null);
+        productData.put("categoryName", product.getCategory() != null ? product.getCategory().getName() : null);
+
+        return new GlobalResponseHandler().handleResponse(
+                "Product retrieved successfully",
+                productData,
+                HttpStatus.OK,
+                request
+        );
+    }
     @DeleteMapping("/{productId}")
     @PreAuthorize("hasRole('SUPER_ADMIN')")
     public ResponseEntity<?> deleteProduct(@PathVariable Integer productId, HttpServletRequest request) {
